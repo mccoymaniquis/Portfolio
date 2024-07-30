@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* src/index.css or src/global.css */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-weight: 400;
+  font-style: normal;
+  /* src: url('/fonts/helvetica-rounded-bold.otf') format('otf'); */
+  src: url('/public/fonts/helvetica-rounded-bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/public/fonts/helvetica-rounded-bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Century';
+  font-weight: 400;
+  font-style: normal;
+  /* src: url('/fonts/helvetica-rounded-bold.otf') format('otf'); */
+  src: url('/public/fonts/19th-Century.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Century';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/public/fonts/19th-Century.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Friend';
+  font-weight: 400;
+  font-style: normal;
+  /* src: url('/fonts/helvetica-rounded-bold.otf') format('otf'); */
+  src: url('/public/fonts/friend-indeed.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Friend';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/public/fonts/friend-indeed.otf') format('otf');
+}
+
+body {
+  @apply font-sans;
+  @apply font-custom;
+  @apply font-friend;
+  color: #fff;
+  background: #ffffff;
+}
+@layer components {
+  .btn {
+    @apply w-full rounded-[4px] cursor-pointer duration-150 hover:ease-in disabled:cursor-default disabled:bg-neutral-100 disabled:hover:bg-neutral-100 disabled:text-neutral-300 disabled:hover:text-neutral-300 disabled:border-neutral-100;
+  }
+  .btn-sm {
+    @apply text-[14px] px-[11.5px] py-[4px];
+  }
+  .btn-primary {
+    @apply bg-primary-300 text-neutral-white hover:bg-primary-500 focus:bg-primary-900;
+  }
+  .btn-secondary {
+    @apply bg-[#535C91] text-neutral-white hover:bg-[#211951] focus:bg-[#211951];
+  }
+  .btn-signIn {
+    @apply bg-white text-gray-800 hover:bg-gray-800 hover:text-white hover:border focus:bg-gray-800 focus:text-white focus:border;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .background-image-container {
+    padding: 20px;
+  }
+
+  .background-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/keyboard.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; /* Blends the overlay color with the background image */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Darkens the image with a semi-transparent color */
+    z-index: -1; /* Ensures the overlay is behind the content */
+    opacity: 0.9;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  @keyframes typewriter {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  .text-typewriter {
+    overflow: hidden;
+    margin: 0 auto; /* Centers the text */
+    letter-spacing: 0.15em; /* Adjusts the spacing between letters */
+    animation: typewriter 4s steps(40, end) 2s infinite,
+      blink 0.75s step-end infinite;
+  }
+
+  .progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    width: 0%; /* Initial width set to 0% */
+    height: 30px; /* Height of the progress bar */
+    transition: width 0.5s ease; /* Smooth transition effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .progress-bar-text {
+    color: #fff; /* Text color */
+    font-weight: bold;
+  }
+
+  .skills-section {
+    padding: 20px;
+  }
+
+  .skills-section h3 {
+    margin: 10px 0;
+  }
+}
