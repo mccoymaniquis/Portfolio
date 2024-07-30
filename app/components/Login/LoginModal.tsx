@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react'
 import Modal from '../Modal'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import Input from '../Forms/Input/Input'
 import { LoginFormValues } from '../types/LoginFormValues'
 
 interface LoginModalProps {
@@ -43,26 +42,7 @@ const LoginModal = (props: LoginModalProps): ReactElement => {
           autoComplete='off'
         >
           <div>{loginTitle}</div>
-          <Input
-            label='Username'
-            name='username'
-            required={true}
-            className=''
-            labelClassName=''
-            placeholder='Username'
-            register={register}
-            errors={errors}
-          />
-          <Input
-            label='Password'
-            name='password'
-            required={true}
-            className=''
-            labelClassName=''
-            placeholder='Password'
-            register={register}
-            errors={errors}
-          />
+
           <div className='w-full'>
             <button
               type='submit'

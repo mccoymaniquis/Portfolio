@@ -1,3 +1,4 @@
+'use client'
 import React, { ReactElement } from 'react'
 import { UseFormReturn, FieldValues, SubmitHandler } from 'react-hook-form'
 import { FormProvider } from '../Forms/FormContext'

@@ -1,4 +1,5 @@
-import React, { createContext, ReactNode, useContext } from 'react'
+'use client'
+import React, { createContext, useContext } from 'react'
 import { UseFormReturn, FieldValues } from 'react-hook-form'
 
 interface FormProviderProps<T extends FieldValues> {
