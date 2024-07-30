@@ -1,3 +1,10 @@
+// Define Skill type here
+interface Skill {
+  id: number
+  name: string
+  percentage: number
+}
+
 export const skills1 = [
   { id: 1, name: 'HTML', percentage: 99 },
   { id: 2, name: 'CSS', percentage: 90 },

@@ -1,16 +1,13 @@
 import React, { ReactElement } from 'react'
 import AboutPage from '../../components/Page/About/page'
-interface PageProps {
-  headerId: number
-}
-const Page = (props: PageProps): ReactElement => {
-  const { headerId } = props
+
+const Page = (): ReactElement => {
   return (
     <section
       id='about'
       className='h-auto background-image-container lg:h-screen '
     >
-      <AboutPage headerId={headerId} />
+      <AboutPage />
     </section>
   )
 }

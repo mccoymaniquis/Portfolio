@@ -3,12 +3,7 @@ import React, { ReactElement } from 'react'
 import Image from 'next/image'
 import { person } from '../../utils/about'
 
-interface PageProps {
-  headerId: number
-}
-
-const Page = (props: PageProps): ReactElement => {
-  const { headerId } = props
+const Page = (): ReactElement => {
   return (
     <div className='flex flex-col lg:flex-row h-full font-custom content lg:px-12 py-12'>
       <div className='flex flex-col justify-center space-y-4 pt-8 lg:w-2/3 '>

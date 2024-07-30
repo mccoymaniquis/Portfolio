@@ -14,7 +14,7 @@ interface MainLayoutProps {
 }
 
 const MainHeader = (props: MainLayoutProps): ReactElement => {
-  const { children, setHeaderId, headerId } = props
+  const { children, setHeaderId, headerId = 1 } = props
   const sectionsRef = useRef<HTMLDivElement[]>([])
 
   useEffect(() => {

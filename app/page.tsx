@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Page from './components/Page'
 import AboutPage from './pages/about/page'
 import SkillsPage from './pages/skills/page'
@@ -13,8 +13,8 @@ const Home: React.FC = () => {
   return (
     <>
       <Page setHeaderId={setHeaderId} headerId={headerId}>
-        <AboutPage headerId={headerId} />
-        <SkillsPage headerId={headerId} />
+        <AboutPage />
+        <SkillsPage />
         <ProjectsPage />
         <ExperiencePage />
         <ContactPage />

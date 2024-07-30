@@ -9,9 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'home-image': "url('/killua.svg')",
-      },
+      backgroundImage: {},
       colors: {
         neutral: {
           50: '#EEF3F7',
